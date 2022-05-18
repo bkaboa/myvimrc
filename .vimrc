@@ -1,3 +1,17 @@
+call plug#begin('~/.vim/plugged')
+
+Plug 'gruvbox-community/gruvbox'
+Plug 'itchyny/lightline.vim'
+Plug 'tribela/vim-transparent'
+Plug 'itchyny/vim-gitbranch'
+Plug 'sheerun/vim-polyglot'
+
+call plug#end()
+
+call polyglot#init#init()
+
+set nocompatible
+
 set nu
 set colorcolumn=80
 set mouse=a
@@ -10,6 +24,7 @@ set syntax=on
 filetype plugin indent on
 filetype indent on
 set ci
+set wildmode=longest,full
 
 set wrap
 
@@ -23,15 +38,7 @@ set hlsearch
 set incsearch
 set showmatch
 
-set nocompatible
-
-call plug#begin('~/.vim/plugged')
-Plug 'gruvbox-community/gruvbox'
-Plug 'itchyny/lightline.vim'
-Plug 'tribela/vim-transparent'
-Plug 'itchyny/vim-gitbranch'
-Plug 'sheerun/vim-polyglot'
-call plug#end()
+set showcmd
 
 syntax on
 
@@ -52,7 +59,7 @@ let g:lightline = {
       \ 'colorscheme': 'wombat',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+      \             ['readonly', 'gitbranch', 'relativepath', 'modified'] ]
       \ },
       \ 'component_function': {
       \     'gitbranch':      'gitbranch#name',
@@ -73,5 +80,6 @@ function! LightlineFilename()
 endfunction
 
 silent! let w:m1=matchadd('ErrorMsg', '\%>80v.\+', -1)set lbr
+
 
 set noshowmode

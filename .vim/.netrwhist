@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =4
+let g:netrw_dirhist_4='/home/czang/Documents/code/openclassroom/html_css/first_classes'
+let g:netrw_dirhist_3='/home/czang/Documents/code/openclassroom/html_css'
+let g:netrw_dirhist_2='/home/czang/Documents/code/openclassroom'
+let g:netrw_dirhist_1='/home/czang/Documents/code'
+let g:netrw_dirhist_0='/home/czang/Documents/code/personnal_project'
+let g:netrw_dirhist_9='/home/czang/Documents/code/personnal_project/site-compagnie'
+let g:netrw_dirhist_8='/home/czang/Documents/code/personnal_project'
+let g:netrw_dirhist_7='/home/czang/Documents/code'
+let g:netrw_dirhist_6='/home/czang/Documents'
+let g:netrw_dirhist_5='/home/czang/Documents/code'
